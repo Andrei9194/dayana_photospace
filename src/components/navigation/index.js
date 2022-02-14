@@ -31,7 +31,7 @@ export const Navigation =()=>{
                     </Link>
                 </div>
                 <div className="nav-socialMedia">
-                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru" target="_blank">
+                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru" target="_blank" rel="noopener noreferrer">
                         <img src={instagram} alt="insta"/>
                     </a>
                 </div>
