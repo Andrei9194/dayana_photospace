@@ -13,6 +13,10 @@
     width: 23.5%;
 }
 
+.nav-logo{
+    padding-top: 25px;
+}
+
 .nav-button-content{
     display: flex;
     flex-direction: column;
@@ -42,9 +46,16 @@
 .nav-button-text{
     text-decoration: none;
 }
+
 .nav-button-text:hover{
     color: black;
 }
+
 .nav-socialMedia{
     padding-bottom: 15px;
+}
+
+.img{
+    pointer-events: none;
+    align-items: center;
 }
