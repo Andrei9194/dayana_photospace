@@ -1,11 +1,16 @@
 import {Link} from 'react-router-dom'
 import './index.css'
+import instagram from '../../assets/insta.png'
+import logo from '../../assets/logo.png'
 
 export const Navigation =()=>{
 
  
     return(
             <div  className='nav-container' >
+                 <div className="nav-logo">
+                    <img src={logo} alt="logo1" className="img"/>
+                </div>
                 <div className="nav-button-content">
                     <Link to='/' className="nav-button-text">
                     <button className='nav-button'> 
@@ -26,8 +31,8 @@ export const Navigation =()=>{
                     </Link>
                 </div>
                 <div className="nav-socialMedia">
-                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru">
-                        instagram
+                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru" target="_blank" rel="noopener noreferrer">
+                        <img src={instagram} alt="insta"/>
                     </a>
                 </div>
             </div>
