@@ -11,7 +11,7 @@ import { initializeApp } from "firebase/app";
   appId: "1:415705365780:web:ba9595f5766c2f82209601"
 };
 
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 export const DATABASE_URL = 'https://dayana-photospace-default-rtdb.europe-west1.firebasedatabase.app'
 

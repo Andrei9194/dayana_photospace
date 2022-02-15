@@ -9,7 +9,7 @@ import useWindowDimensions from "./parametres"
 export const Home =() =>{
 
     const [images, setImages] = useState(null);
-    const {height, width} = useWindowDimensions()
+    const {height} = useWindowDimensions()
  
     useEffect(()=>{
         onSnapshot(collection(db, 'homeImage'), (snapshot)=>{
@@ -24,11 +24,11 @@ export const Home =() =>{
               {images && images.map(image =>
                          
                 <Carousel.Item interval={3000}>
-                    <img
+                    <img 
                 className="d-block" 
                 src={image.homeUrl}
                 alt="First slide"
-                style={{width: '100%', height: `${height}px`, display: 'block', pointerEvents: 'none'}}
+                style={{width: '100%', height: `${height}px`, pointerEvents: 'none'}}
                 />      
                 </Carousel.Item>
 
