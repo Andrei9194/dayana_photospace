@@ -3,12 +3,14 @@ import { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
 import { collection, onSnapshot } from "firebase/firestore"
 import db from "../../firebase-config"
+import useWindowDimensions from "./parametres"
 
 
 export const Home =() =>{
 
     const [images, setImages] = useState(null);
-
+    const {height, width} = useWindowDimensions()
+ 
     useEffect(()=>{
         onSnapshot(collection(db, 'homeImage'), (snapshot)=>{
             setImages(snapshot.docs.map(doc => doc.data()))
@@ -26,7 +28,7 @@ export const Home =() =>{
                 className="d-block" 
                 src={image.homeUrl}
                 alt="First slide"
-                style={{width: '100%', height: `${600}px`, display: 'block', pointerEvents: 'none'}}
+                style={{width: '100%', height: `${height}px`, display: 'block', pointerEvents: 'none'}}
                 />      
                 </Carousel.Item>
 
