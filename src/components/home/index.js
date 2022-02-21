@@ -24,12 +24,8 @@ export const Home =() =>{
               {images && images.map(image =>
                          
                 <Carousel.Item interval={3000}>
-                    <img 
-                className="d-block" 
-                src={image.homeUrl}
-                alt="First slide"
-                style={{width: '100%', height: `${height}px`, pointerEvents: 'none'}}
-                />      
+                    <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`, height: `${height}px`}}>
+                    </div>
                 </Carousel.Item>
 
                 )}
