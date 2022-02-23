@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import './index.css'
 import emailjs from '@emailjs/browser';
 import useWindowDimensions from '../../components/home/parametres'
 
