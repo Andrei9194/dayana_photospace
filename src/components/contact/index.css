@@ -1,0 +1,178 @@
+.contact-container{
+    background-image: url('../../assets/bg-contact.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.contact-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.4));
+    filter: grayscale(100%) brightness(64%);
+    -webkit-filter: grayscale(100%) brightness(64%);
+    -moz-filter: grayscale(100%) brightness(64%);
+  }
+
+.contact-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.contact-information{
+    margin-bottom: 60px;
+}
+.contact-logo{
+    border: 1px solid white;
+}
+
+.contact-title{
+    letter-spacing: 1px;
+    color: white;
+    margin: 0;
+}
+
+.contact-text{
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+}
+
+.contact-button-call{
+    width: 200px;
+    height: 50px;
+    border-radius: 40%;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form-input{
+    margin-bottom: 5px;
+    height: 50px;
+    width: 98%;
+    color: #282828;
+    margin: 0 0 1% 2%;
+    text-indent: 2%;  
+}
+.contact-form-input:focus, input:focus{
+    outline: none;
+}
+.contact-form-input::placeholder{
+    color: #282828;
+    opacity: 0.8;
+    font-family: Georgia;
+}
+
+.name-phone-input{
+    width: 50%;
+}
+.portfolio-element:hover{
+    filter: grayscale(100%);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.name-phone-area{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-form-input:-webkit-autofill{
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.contact-text-link-email{
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-text-link-email:hover{
+    color: aliceblue;
+}
+
+ 
+      .btn-send {
+        background: none;   
+        border: none; 
+
+        letter-spacing: 0;
+        align-self: flex-end;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 45px;
+        max-width: 160px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
+        padding: 0;
+      }
+
+      .btn-send:hover {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .btn-send {
+        letter-spacing: 0;
+      }
+      .btn-send:hover, .btn-send:active {
+        letter-spacing: 5px;
+      }
+      .btn-send:after, .btn-send:before {
+        backface-visibility: hidden;
+        border-bottom: 1px solid rgba(255, 255, 255, 0);
+        bottom: 0px;
+        content: " ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        transition: all 280ms ease-in-out;
+        width: 0;
+      }
+      .btn-send:hover:after, .btn-send:hover:before {
+        backface-visibility: hidden;
+        border-color: #fff;
+        transition: width 350ms ease-in-out;
+        width: 90%;
+      }
+      .btn-send:hover:before {
+        bottom: auto;
+        top: 0;
+        width: 90%;
+      }
+
+.contact-link-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+}
+
+
