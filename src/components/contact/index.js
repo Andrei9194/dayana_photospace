@@ -24,7 +24,7 @@ export const Contact = () => {
             <div className='contact-info'>
                 <h1 className='contact-title'>Есть вопросы?</h1>
                 <p className='contact-text'>Если вы заинтересованы или заинтересованы в сессии,<br/> напишите мне: 
-                <span><a href='#' className='contact-text-link-email'> gmail@gmail.com</a></span></p>
+                <span><a href='/' className='contact-text-link-email'> gmail@gmail.com</a></span></p>
             </div>
             <div>
             <form ref={form} onSubmit={sendEmail} className='contact-form'>
@@ -38,7 +38,7 @@ export const Contact = () => {
              </form>
             </div>
             <div className='contact-link-area'>
-                <a href='https://www.instagram.com/dayana_photospace/?hl=ru' target="_blank" className='links insta'>
+                <a href='https://www.instagram.com/dayana_photospace/?hl=ru' target="_blank" rel="noreferrer" className='links insta'>
                    Insta
                 </a>
             </div>
