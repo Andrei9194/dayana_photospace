@@ -20,8 +20,8 @@ export const Navigation =()=>{
                     <Link to='/portfolio' className="nav-button-text">
                         <button className="nav-button">портфолио</button>
                     </Link>
-                    <Link to='/blog' className="nav-button-text">
-                        <button  className="nav-button">блог</button>
+                    <Link to='/faq-page' className="nav-button-text">
+                        <button  className="nav-button">вопрос-ответ</button>
                     </Link>
                     <Link to='/about-me' className="nav-button-text">
                         <button  className="nav-button">обо мне</button>
