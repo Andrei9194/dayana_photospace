@@ -1,5 +1,6 @@
-import arrowContact from '../../assets/arrow-right.png'
+// import arrowContact from '../../assets/arrow-right.png'
 import { Link } from 'react-router-dom'
+import './index.css'
 
 export const AboutMe =() =>{
 
@@ -41,16 +42,6 @@ export const AboutMe =() =>{
                             </div>
 
                     </div>
-                    {/* <div className='aboutme-image'>
-                        <img src={i} alt='me'/>
-                         {avatar && avatar.map(a=>
-                         <img srcSet={`${a.avatar} 480w`}
-                         alt="me" 
-                         sizes='(min-width: 768px) 480px, 50vw'
-                         className='aboutme-avatar'
-                         />
-                    )}
-                    </div> */}
                 </div>
             </div>     
 

@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+.aboutme-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: flex-start;
+   margin-top: 25px;
+}
+
+.aboutme-information{
+	width: 359px;
+	height: 468px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 72px;
+	margin-right: 22px;
+}
+.aboutme-content{
+    border-top: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	margin-left: 20px;
+}
+
+.aboutme-title{
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 149%;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+.aboutme-text{
+	font-style:italic;
+	font-size: 14px;
+	line-height: 20.86px;
+}
+
+.aboutme-button-area{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.arrow {
+	font-size: 14px;
+	line-height: 20.86px;
+	color: black;
+	cursor: pointer;
+	align-items: flex-start;
+	text-transform: uppercase;
+	position: relative;
+	transition: transform 0.3s;
+	margin-left: 10px;
+}
+.arrow span {
+	 width: 100px;
+	 opacity: 0;
+	 transition: opacity 0.3s 0s;
+	 padding: 0 0.5em;
+}
+ .arrow:hover span {
+	 opacity: 1;
+	 transition: opacity 0.3s 0.1s;
+}
+.arrow:before {
+	 content: '';
+	 display: block;
+	 border: solid black;
+	 border-width: 2px 2px 0 0;
+	 position: absolute;
+	 top: 4px;
+	 width: 10px;
+	 height: 10px;
+}
+ .arrow.arrow--right:before {
+	 left: 0;
+	 transform: rotate(45deg);
+	 transition: left 0.3s 0.2s;
+} 
+.arrow.arrow--right:hover:before {
+	 left: 100%;
+	 transition: left 0.3s;
+}
