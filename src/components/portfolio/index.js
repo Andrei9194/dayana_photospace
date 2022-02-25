@@ -1,8 +1,20 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import {DATABASE_URL} from '../../firebase-config'
 
 export const Portfolio = ()=>{
 
     const [images, setImages] = useState(null)
+
+    useEffect(()=>{
+        fetch(`${DATABASE_URL}/portfolioImages.json`)
+        .then(r => r.json())
+        .then(data => {
+            const formattedData = Object.keys(data).map(key => ({id: key, ...data[key]}));
+            setImages(formattedData);
+        })
+        .catch(()=>{      
+        })         
+    }, [])
 
     return(
         <div className="portfolio-container" >
