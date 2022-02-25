@@ -25,9 +25,9 @@ export const PortfolioDetails =() =>{
                     <ImageListItem key={item.id}>
                     <img
                         src={item.url}
-                        srcSet={item.url}
                         alt='portfolio image'
                         style={{pointerEvents: 'none'}}
+                        aria-hidden
                     />
                     </ImageListItem>
                 ))}
