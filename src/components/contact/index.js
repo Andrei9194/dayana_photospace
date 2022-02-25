@@ -2,6 +2,8 @@ import React, { useRef } from 'react';
 import './index.css'
 import emailjs from '@emailjs/browser';
 import useWindowDimensions from '../../components/home/parametres'
+import InstagramIcon from '@mui/icons-material/Instagram'
+import CallIcon from '@mui/icons-material/Call';
 
 export const Contact = () => {
   const form = useRef();
@@ -24,7 +26,7 @@ export const Contact = () => {
             <div className='contact-info'>
                 <h1 className='contact-title'>Есть вопросы?</h1>
                 <p className='contact-text'>Если вы заинтересованы или заинтересованы в сессии,<br/> напишите мне: 
-                <span><a href='/' className='contact-text-link-email'> gmail@gmail.com</a></span></p>
+                <span><a href='/' className='contact-text-link-email'> dayanaklimuk@gmail.com</a></span></p>
             </div>
             <div>
             <form ref={form} onSubmit={sendEmail} className='contact-form'>
@@ -38,9 +40,12 @@ export const Contact = () => {
              </form>
             </div>
             <div className='contact-link-area'>
-                <a href='https://www.instagram.com/dayana_photospace/?hl=ru' target="_blank" rel="noreferrer" className='links insta'>
-                   Insta
-                </a>
+              <a href='https://www.instagram.com/dayana_photospace/?hl=ru' target="_blank" rel="noreferrer" className='links'>
+                  <InstagramIcon  className='link-icon' />
+              </a>
+              <a href='tel:+48510022444' className='links'>
+                <CallIcon className='link-icon' />
+              </a>
             </div>
          </div>   
     </div>
