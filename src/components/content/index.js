@@ -4,6 +4,7 @@ import {Contact} from '../contact'
 import { FaqS } from '../faqS'
 import { Home } from '../home'
 import { Portfolio } from '../portfolio'
+import {PortfolioDetails} from '../../components/portfolio/portfolioDetails'
 import './index.css'
 
 
@@ -18,6 +19,7 @@ export const Content = () =>{
                 <Route path='/about-me' element={<AboutMe/>} />
                 <Route path='/faq-page' element={<FaqS/>} />
                 <Route path='/portfolio' element={<Portfolio />} />
+                <Route path='/portfolio/:id' element={<PortfolioDetails />} />
             </Routes>
         </div>
     )
