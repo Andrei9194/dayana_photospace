@@ -23,7 +23,7 @@ export const Contact = () => {
   return (
     <div className='contact-container' style={{height: `${height}px`}}>
         <div className='contact-content'>
-            <div className='contact-info'>
+            <div className='contact-information'>
                 <h1 className='contact-title'>Есть вопросы?</h1>
                 <p className='contact-text'>Если вы заинтересованы или заинтересованы в сессии,<br/> напишите мне: 
                 <span><a href='/' className='contact-text-link-email'> dayanaklimuk@gmail.com</a></span></p>

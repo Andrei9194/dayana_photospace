@@ -5,7 +5,7 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: flex-start;
+   align-items: center;
    margin-top: 25px;
 }
 
@@ -22,7 +22,6 @@
     border-top: 1px solid black;
 	display: flex;
 	flex-direction: row;
-	margin-left: 20px;
 }
 
 .aboutme-title{
@@ -87,4 +86,20 @@
 .arrow.arrow--right:hover:before {
 	 left: 100%;
 	 transition: left 0.3s;
+}
+.aboutMe-contact-link{
+    text-decoration: none;
+    color: black;
+}
+.aboutMe-contact-link:hover{
+    color: black;
+}
+
+.aboutme-avatar{
+	width: 360px;
+	height: 520px;
+}
+
+.aboutme-image{
+	margin-top: 20px;
 }

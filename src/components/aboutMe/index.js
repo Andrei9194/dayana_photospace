@@ -1,6 +1,8 @@
-// import arrowContact from '../../assets/arrow-right.png'
-import { Link } from 'react-router-dom'
+import {useEffect, useState} from 'react'
+import db from "../../firebase-config"
 import './index.css'
+import { collection, onSnapshot } from 'firebase/firestore'
+import { Link } from 'react-router-dom'
 
 export const AboutMe =() =>{
 
@@ -14,6 +16,14 @@ export const AboutMe =() =>{
           }}
         />
       );
+
+      const [avatar, setAvatar] = useState()
+
+      useEffect(()=>{
+          onSnapshot(collection(db, 'avatar'), (snapshot)=>{
+              setAvatar(snapshot.docs.map(doc=>doc.data()))
+          })
+      }, [])
 
     return(
             <div className='aboutme-container' >     
@@ -30,17 +40,23 @@ export const AboutMe =() =>{
                                 Живу и снимаю в Гродно. <br/>
                                 Если наши с вами взгляды на съемку совпадают, свяжитесь со мной любым удобным для вас способом. 
                                     <span className="arrow arrow--right">
-                                        <Link to='/contacts' style={{textDecoration: 'none', color: 'black'}}>
+                                        <Link to='/contacts' className='aboutMe-contact-link'>
                                             <span>Kонтакты</span>
                                         </Link>
                                     </span>
                             </p> 
-
                             <div className='aboutme-line'>
                                 <ColoredLine color='black'/>
                                 <ColoredLine color='black'/>
                             </div>
-
+                    </div>
+                    <div className='aboutme-image'>
+                         {avatar && avatar.map(a=>
+                         <img src={`${a.avatar}`}
+                         alt="me" 
+                         className='aboutme-avatar'
+                         />
+                    )}
                     </div>
                 </div>
             </div>     
