@@ -1,39 +1,49 @@
-import {Link} from 'react-router-dom'
+import {useState} from 'react'
+import {NavLink} from "react-router-dom"
 import './index.css'
-import instagram from '../../assets/insta.png'
-import logo from '../../assets/logo.png'
+import instagram from "../../assets/insta.png"
+import logo1 from  '../../assets/logo.png'
+import MenuIcon from '@mui/icons-material/Menu';
 
-export const Navigation =()=>{
+export const Navigation =() =>{
 
- 
+const [changeMenu, setChangeMenu] = useState(false)
+
+const handleChangeMenu =() =>{
+    setChangeMenu(!changeMenu)
+}
+
     return(
-            <div  className='nav-container' >
-                 <div className="nav-logo">
-                    <img src={logo} alt="logo1" className="img"/>
+
+            <div className={changeMenu ? "nav-container open-menu": "nav-container"} >
+                <div className={changeMenu ? "nav-logo display-closet": "nav-logo display-open" }>
+                    <img src={logo1} alt="logo1" className="img"/>
+
                 </div>
-                <div className="nav-button-content">
-                    <Link to='/' className="nav-button-text">
-                    <button className='nav-button'> 
-                        Главная
-                    </button>
-                    </Link>
-                    <Link to='/portfolio' className="nav-button-text">
+                <div  className={changeMenu ? "nav-button-content display-open": "nav-button-content display-closet"}>
+                    <NavLink exact to='/'  className="nav-button-text" onClick={handleChangeMenu} >
+                    <button className="nav-button">Главная</button>
+                    </NavLink>
+                    <NavLink to='/portfolio' className="nav-button-text" onClick={handleChangeMenu}>
                         <button className="nav-button">портфолио</button>
-                    </Link>
-                    <Link to='/faq-page' className="nav-button-text">
+                    </NavLink>
+                    <NavLink to='/faq-page' className="nav-button-text" onClick={handleChangeMenu}>
                         <button  className="nav-button">вопрос-ответ</button>
-                    </Link>
-                    <Link to='/about-me' className="nav-button-text">
+                    </NavLink>
+                    <NavLink to='/about-me' className="nav-button-text" onClick={handleChangeMenu}>
                         <button  className="nav-button">обо мне</button>
-                    </Link>
-                    <Link to='/contacts' className="nav-button-text">
+                    </NavLink>
+                    <NavLink to='/contacts' className="nav-button-text" onClick={handleChangeMenu}>
                         <button  className="nav-button">контакты</button>
-                    </Link>
+                    </NavLink>
                 </div>
-                <div className="nav-socialMedia">
-                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru" target="_blank" rel="noopener noreferrer">
-                        <img src={instagram} alt="insta"/>
+                <div className={changeMenu ? "nav-socialMedia display-open": "nav-socialMedia display-closet"}>
+                    <a href="https://www.instagram.com/dayana_photospace/?hl=ru">
+                        <img src={instagram} alt="insta" />
                     </a>
+                </div>
+                <div onClick={handleChangeMenu} className={changeMenu ? "menuIcon-media display-closet": "menuIcon-media display-open"}>
+                    <MenuIcon /> 
                 </div>
             </div>
     )
