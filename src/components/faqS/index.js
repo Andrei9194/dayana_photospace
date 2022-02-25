@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 import { DATABASE_URL } from '../../firebase-config';
-import { BlogRow } from './blogRow';
+import { FaqSrow } from './faqSrow';
+import './index.css'
 
 
 export const FaqS = () => {
@@ -27,7 +28,7 @@ export const FaqS = () => {
     <div className='blog-container'>
         <h3 style={{marginBottom: '50px'}}>Часто задаваемые вопросы</h3>
         {faqs && faqs.map(faq => 
-          <BlogRow faq={faq} key={faq.id}/>
+          <FaqSrow faq={faq} key={faq.id}/>
         )}
     </div>
   );
