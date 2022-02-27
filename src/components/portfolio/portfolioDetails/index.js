@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import '../index.css'
+import './index.css'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
@@ -22,11 +22,11 @@ export const PortfolioDetails =() =>{
 
     TabTitle(params.id)
     return(
-                <ImageList variant="masonry" cols={3} className='portfolio-imageList'>
+        <div className='portfolioDetails-container'>
+            <ImageList variant="masonry" className='portfolioDetails-imageList'>
                 {images && images.map((item) => (
-                    <ImageListItem key={item.id} style={{width: '200px'}}  className='portfolio-imageListItem'>
+                    <ImageListItem key={item.id} className='portfolioDetails-imageListItem'>
                     <img
-                        style={{width:'150px', pointerEvents: 'none'}}
                         src={item.url}
                         alt='portfolio image'
                         className='portfolioDetails-image'
@@ -35,5 +35,7 @@ export const PortfolioDetails =() =>{
                     </ImageListItem>
                 ))}
                 </ImageList>
+        </div>
+                
     )
 }
