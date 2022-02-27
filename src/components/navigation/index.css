@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     width: 23.5%;
+    width: 320px;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -37,9 +38,6 @@
     padding: 0;
 }
 
-.nav-active{
-    background: red !important;
-}
 .nav-button:hover{
     background: #e1e1e1;
 }
