@@ -22,7 +22,7 @@ export const PortfolioDetails =() =>{
 
     TabTitle(params.id)
     return(
-        <div style={{background: 'red'}}>
+        // <div style={{background: 'red'}}>
                 <ImageList variant="masonry" cols={3} className='portfolio-imageList'>
                 {images && images.map((item) => (
                     <ImageListItem key={item.id} style={{width: '200px'}}  className='portfolio-imageListItem'>
@@ -37,7 +37,7 @@ export const PortfolioDetails =() =>{
                     </ImageListItem>
                 ))}
                 </ImageList>
-        </div>
+        // </div>
        
     )
 }
