@@ -5,6 +5,8 @@ import ImageListItem from '@mui/material/ImageListItem';
 import { useParams } from 'react-router-dom';
 import { collection, onSnapshot } from 'firebase/firestore';
 import db from '../../../firebase-config'
+import { TabTitle } from '../../../TabTitle';
+
 
 
 export const PortfolioDetails =() =>{
@@ -17,6 +19,9 @@ export const PortfolioDetails =() =>{
             setImages( snapshot.docs.map(doc =>doc.data()))
          })
     }, [params])
+
+
+    TabTitle(params.id)
 
     return(
         <div className="portfolio-container">
@@ -33,6 +38,5 @@ export const PortfolioDetails =() =>{
                 ))}
                 </ImageList>
         </div>
-       
     )
 }
