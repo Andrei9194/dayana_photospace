@@ -1,5 +1,10 @@
-
+.portfolio-container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .portfolio-content-image{
+
     margin-top: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -32,7 +37,7 @@
 }
 
 .portfolio-element{
-    width: 100%;
+    width: 90%;
     height: 500px;
     height: 100%;
     transition:.2s all; 

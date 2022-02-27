@@ -2,9 +2,12 @@ import {useState, useEffect} from "react"
 import './index.css'
 import { DATABASE_URL } from '../../firebase-config'
 import { PortfolioRow } from "./portfolioRow"
+import { TabTitle } from "../../TabTitle"
 
 export const Portfolio =() =>{
 
+
+    TabTitle('Портфолио')
     const [images, setImages] = useState(null)
 
     useEffect(()=>{
@@ -16,7 +19,7 @@ export const Portfolio =() =>{
       })
       .catch(()=>{      
       })         
-  }, [])
+  }, [images])
   
     return(
         <div className="portfolio-container" >

@@ -1,12 +1,13 @@
 import {useEffect, useState} from 'react';
 import { DATABASE_URL } from '../../firebase-config';
+import { TabTitle } from '../../TabTitle';
 import { FaqSrow } from './faqSrow';
 import './index.css'
 
 
 export const FaqS = () => {
   
-
+TabTitle('Вопрос-Ответ')
   const [faqs, setFaqs] = useState(null)
 
   useEffect(()=>{
