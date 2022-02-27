@@ -4,8 +4,12 @@ import emailjs from '@emailjs/browser';
 import useWindowDimensions from '../../components/home/parametres'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import CallIcon from '@mui/icons-material/Call';
+import { TabTitle } from '../../TabTitle';
+
 
 export const Contact = () => {
+
+  TabTitle('Контакты')
   const form = useRef();
   const {height} = useWindowDimensions()
   const sendEmail = (e) => {

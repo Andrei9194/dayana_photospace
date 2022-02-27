@@ -3,8 +3,11 @@ import db from "../../firebase-config"
 import './index.css'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { Link } from 'react-router-dom'
+import { TabTitle } from '../../TabTitle'
 
 export const AboutMe =() =>{
+
+    TabTitle('Обо мне')
 
     const ColoredLine = ({ color }) => (
         <hr

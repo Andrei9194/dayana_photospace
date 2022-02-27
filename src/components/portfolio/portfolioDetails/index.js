@@ -7,9 +7,8 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import db from '../../../firebase-config'
 import { TabTitle } from '../../../TabTitle';
 
-
-
 export const PortfolioDetails =() =>{
+
 
     const [images, setImages] = useState(null)
     const params = useParams()
@@ -20,23 +19,21 @@ export const PortfolioDetails =() =>{
          })
     }, [params])
 
-
     TabTitle(params.id)
 
     return(
-        <div className="portfolio-container">
-                <ImageList sx={{ width: 900, paddingTop: "60px"}} variant="masonry" cols={3} >
+                <ImageList variant="masonry" cols={3} className='portfolio-imageList'>
                 {images && images.map((item) => (
-                    <ImageListItem key={item.id}>
+                    <ImageListItem key={item.id} style={{width: '200px'}}  className='portfolio-imageListItem'>
                     <img
+                        style={{width:'150px', pointerEvents: 'none'}}
                         src={item.url}
                         alt='portfolio image'
-                        style={{pointerEvents: 'none'}}
+                        className='portfolioDetails-image'
                         aria-hidden
                     />
                     </ImageListItem>
                 ))}
                 </ImageList>
-        </div>
     )
 }
