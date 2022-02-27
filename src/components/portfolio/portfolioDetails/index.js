@@ -7,7 +7,6 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import db from '../../../firebase-config'
 import { TabTitle } from '../../../TabTitle';
 
-
 export const PortfolioDetails =() =>{
 
 
@@ -21,6 +20,7 @@ export const PortfolioDetails =() =>{
     }, [params])
 
     TabTitle(params.id)
+
     return(
                 <ImageList variant="masonry" cols={3} className='portfolio-imageList'>
                 {images && images.map((item) => (
