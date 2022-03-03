@@ -105,13 +105,13 @@
     }
     
 
-.display-closet{
-    transform: translateX(100%);
-}
+    .display-closet{
+        transform: translateX(100%);
+    }
 
-.dispay-open{
-    transform: translateX(0%);
-}
+    .dispay-open{
+        transform: translateX(0%);
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -149,10 +149,11 @@
     .menuIcon-media{
         left: 90%;
     }
-.display-closet{
-    transform: translateX(100%);
-}
+    .display-closet{
+        transform: translateX(100%);
+    }
 
-.dispay-open{
-    transform: translateX(0%);
+    .dispay-open{
+        transform: translateX(0%);
+    }
 }
