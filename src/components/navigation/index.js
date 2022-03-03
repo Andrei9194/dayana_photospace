@@ -28,8 +28,8 @@ const handleChangeMenu =() =>{
                         <NavLink to='/portfolio' className="nav-button-text" onClick={handleChangeMenu}>
                             <button className="nav-button">портфолио</button>
                         </NavLink>
-                        <NavLink to='/blog' className="nav-button-text" onClick={handleChangeMenu}>
-                            <button  className="nav-button">блог</button>
+                        <NavLink to='/faq-page' className="nav-button-text" onClick={handleChangeMenu}>
+                            <button  className="nav-button">вопрос-ответ</button>
                         </NavLink>
                         <NavLink to='/about-me' className="nav-button-text" onClick={handleChangeMenu}>
                             <button  className="nav-button">обо мне</button>

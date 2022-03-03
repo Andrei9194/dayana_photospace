@@ -24,9 +24,10 @@ export const Portfolio =() =>{
     return(
         <div className="portfolio-container" >
             <div className="portfolio-content-image">
-                    {images && images.map(image=> 
-                      <PortfolioRow image={image}/>            
-                    )}
+                {images && images.map(image=> 
+                    <PortfolioRow image={image}/>            
+                )
+                }
             </div>
         </div>
     )
