@@ -129,9 +129,7 @@
     .nav-logo{
         margin: 0;
         display: block;
-    }
-    .img{
-        width:45%;
+        width: 17vw;
     }
 
     .nav-button-content{
@@ -146,5 +144,4 @@
     .menuIcon-media{
         left: 90%;
     }
-
 }

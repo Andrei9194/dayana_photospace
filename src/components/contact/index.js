@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './index.css'
 import emailjs from '@emailjs/browser';
-import useWindowDimensions from '../../components/home/parametres'
+import {send} from '@emailjs/browser'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import CallIcon from '@mui/icons-material/Call';
 import { TabTitle } from '../../TabTitle';
@@ -15,6 +15,7 @@ export const Contact = () => {
   const [name, setName] = useState('')
   const [number, setNumber] = useState('')
   const [email, setEmail] = useState('')
+  const [textArea, setTextArea] = useState('')
   const [click, setClick] = useState(true)
 
   const hanlderClick = ()=>{
@@ -26,24 +27,20 @@ export const Contact = () => {
     }
   }
 
-  console.log('CLick:', click)
-  console.log('name:', name.length)
-  console.log('email:', email.length)
-  console.log('number:', number.length)
+    const sendEmail=(e)=>{
+      e.preventDefault()
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('Gmail', 'template_pu1szot', e.target, "user_D9kLRU2Q6Iz7KBUKsryRQ")
-    .then((result) => {
-            console.log(result.text);
-
-        }, (error) => {
-            console.log(error.text);
-        });
-        e.target.reset()
-    };
-
+      send('Gmail', 'template_pu1szot', {name, email, textArea, number}, "user_D9kLRU2Q6Iz7KBUKsryRQ")
+      .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          setName('')
+          setNumber('')
+          setEmail('')
+          setTextArea('')
+      };
 
     const nameHandler = (e)=>{
       setName(e.target.value)
@@ -55,14 +52,11 @@ export const Contact = () => {
 
     const handlerEmail = (e) =>{
       setEmail(e.target.value)
-      const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-      if(!re.test(String(e.target.value).toLocaleLowerCase())){
-        setEmailError('Введиет свою электронную почту')
-      }else{
-        setEmailError('')
-      }
     }
 
+    const handleTextArea = (e) =>{
+      setTextArea(e.target.value)
+    }
    useEffect(()=>{
       if(name.length && number.length && email.length){
          setClick(true)
@@ -82,20 +76,24 @@ export const Contact = () => {
               <form ref={form} onSubmit={sendEmail} className='contact-form'>
                   <div className='name-phone-area'>
 
-                    <input type="text" name="name" placeholder={(name===''  && !click) ?  'Введите имя' : "Имя"}
+                    <input type="text" name="name" placeholder={((name=== '')  && !click) ?  'Введите имя' : "Имя"}
+                    value={name}
                       className={((name=== '' )&& !click) ? 'contact-form-input-error name-phone-input' : 'contact-form-input name-phone-input'}
                       onChange={(e)=>nameHandler(e)}
                     />
-                    <input type="number" name="user_phone" placeholder={(number === '' && !click) ?  'Введите номер телефона'  : "Номер телефона"}
+                    <input type="number" name="user_phone" placeholder={((number === '') && !click) ?  'Введите номер телефона'  : "Номер телефона"}
                       className={(number === '' && !click) ? 'contact-form-input-error name-phone-input' : 'contact-form-input name-phone-input'}
                       onChange={(e)=>numberHandler(e)}
+                      value={number}
                     />
                   </div>
-                <input type="email" name="user_email" placeholder={(email === '' && !click)  ?  'Введите эдектроную почту' : "Адрес электронной почты"}
+                <input type="email" name="user_email" placeholder={((email === '') && !click)  ?  'Введите эдектроную почту' : "Адрес электронной почты"}
                     className={(email === '' && !click) ? 'contact-form-input-error' : 'contact-form-input'}
-                    onChange={(e)=>handlerEmail(e)}
+                    onChange={(e)=>handlerEmail(e)} 
+                    value={email}
                   />
-                  <textarea name="message" placeholder='Введите свое сообщение' className='contact-form-input contact-form-text-area'/>
+                  <textarea name="message"  value={textArea}
+                  onChange={(e)=>handleTextArea(e)} placeholder='Введите свое сообщение' className='contact-form-input contact-form-text-area'/>
                 {!click ? 
                     <button  className='btn-send-disabled' onClick={hanlderClick} disabled={!click}>Заполни поля</button>
                     :<button  className='btn-send' onClick={hanlderClick} disabled={!click}>Отправить</button>
