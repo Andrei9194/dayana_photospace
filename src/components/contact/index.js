@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './index.css'
-import emailjs from '@emailjs/browser';
 import {send} from '@emailjs/browser'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import CallIcon from '@mui/icons-material/Call';
