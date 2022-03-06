@@ -12,6 +12,7 @@ export const AboutMe =() =>{
     const ColoredLine = ({ color }) => (
         <hr
           style={{
+              width: '100%',
             color,
             backgroundColor: color,
             height: 2,
