@@ -88,6 +88,7 @@
   color: #282828;
   margin: 0 0 1% 2%;
   text-indent: 2%;  
+  font-size: 1rem;
 }
 
 .contact-form-input-error::placeholder{
@@ -255,56 +256,60 @@ input[type=number] {
     width: 0;
   }
 
-  @media screen and (max-width: 576px) {
+@media screen and (max-width: 576px) {
    
 
-    .contact-container{
-      height: 90vh;
-      justify-content: space-evenly;
-    }
+  .contact-container{
+    height: 90vh;
+    justify-content: space-evenly;
+  }
 
-    .contact-information{
-      max-width: 70vw;
-    }
+  .contact-information{
+     max-width: 70vw;
+  }
 
-    .contact-form{
+  .contact-form{
       width: min(90%, 70.5rem);
   }
   .contact-title{
     font-size: 1.5rem;
-}
+  }
 
-.contact-text{
-  font-size: 0.8rem;
-}
+  .contact-text{
+    font-size: 0.8rem;
+  }
 
-.contact-link-email{
-  font-size: 1rem;
-}
+  .contact-link-email{
+    font-size: 1rem;
+  }
 
   .contact-form-input{
     font-size: 0.8rem;
     height: 30px;
-}
-
-.contact-form-text-area{
-  height: 20vh;
-}
-  
-    .name-phone-area{
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .name-phone-input{
-      margin: 0 0 1% 2%;
-      width: 98%;
-    }
-
-.contact-link-area{
-  align-items: flex-start;
-  margin-bottom: 4vh;
-}
-
-
   }
+
+  .contact-form-text-area{
+    height: 20vh;
+  }
+  
+  .name-phone-area{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .name-phone-input{
+    margin: 0 0 1% 2%;
+    width: 98%;
+  }
+
+  .contact-link-area{
+    align-items: flex-start;
+    margin-bottom: 4.5vh;
+  }
+
+  .contact-form-input-error{
+    height: 30px;
+    font-size: 0.8rem;
+  }
+
+}
