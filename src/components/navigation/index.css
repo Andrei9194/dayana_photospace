@@ -1,7 +1,7 @@
 .nav-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
     left: 0;
     width: 23.5%;
@@ -19,12 +19,8 @@
     margin-bottom: 35%;
 }
 
-.toogle-content{
-    width: 100%;
-}
-
 .nav-button{
-    width: 100%;
+    width: 320px;
     height: 45px;
     background: none;   
     border: none; 
@@ -46,7 +42,6 @@
 
 .nav-button-text{
     text-decoration: none;
-    width: 100%;
 }
 .nav-button-text:hover{
     color: black;
@@ -56,7 +51,7 @@
     margin-bottom: 5%;
 }
 .nav-logo{
-    padding-top: 25px;
+    margin-bottom: 25px;
 }
 
 .img{
@@ -79,21 +74,24 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        height: 15%;
-        padding-top: 5px;
+        height: 100px;
     }
+
     .nav-logo{
         padding-top: 0px;
     }
+
     .img{
         width:55%;
         align-self: center;
     }
+
     .menuIcon-media{
         display: block;
         position: absolute;
-        left: 95%;
+        left: 93%;
     }
+
     .nav-button-content{
         width: 100%;
     }
@@ -103,17 +101,16 @@
     }
     .toogle-content{
         position: fixed;
-        background-color: #fff;
-        align-items: center;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        inset:  0 0 0 70%;
+        background-color: #F8F8F8;
+        align-items: center;
+        margin: 0 auto;
+        inset:  0 0 0 65%;
         transition: transform 350ms ease-in-out;
     }
     
-
     .display-closet{
         transform: translateX(100%);
     }
@@ -126,12 +123,11 @@
 @media screen and (max-width: 576px) {
 
     .nav-container{
-        height: 10%;
-        padding-top: 5px;
+        height: 10vh;
     }
 
     .nav-logo{
-        padding: 0;
+        margin: 0;
         display: block;
     }
     .img{
@@ -143,26 +139,12 @@
     }
 
     .toogle-content{
-        position: fixed;
-        background-color: #fff;
-        align-items: center;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         inset:  0 0 0 0%;
-        transition: transform 350ms ease-in-out;
+        background-color: #fff;
     }
-    
 
     .menuIcon-media{
         left: 90%;
     }
-    .display-closet{
-        transform: translateX(100%);
-    }
 
-    .dispay-open{
-        transform: translateX(0%);
-    }
 }
