@@ -15,10 +15,6 @@ export const Contact = () => {
   const [name, setName] = useState('')
   const [number, setNumber] = useState('')
   const [email, setEmail] = useState('')
-
-  const [emailDirty, setEmailDirty] = useState(false)
-  const [emailError, setEmailError] = useState('Введиет свою электронную почту')
-
   const [click, setClick] = useState(true)
 
   const hanlderClick = ()=>{
@@ -35,26 +31,17 @@ export const Contact = () => {
   console.log('email:', email.length)
   console.log('number:', number.length)
 
-
-  const {height} = useWindowDimensions()
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('Gmail', 'template_pu1szot', e.target, "user_D9kLRU2Q6Iz7KBUKsryRQ")
     .then((result) => {
             console.log(result.text);
-        //             setName('')
-        // setNumber('')
-        // setNumber('')
 
         }, (error) => {
             console.log(error.text);
         });
         e.target.reset()
-        // setName('')
-        // setNumber('')
-        // setNumber('')
-        // console.log(e.target)
     };
 
 
