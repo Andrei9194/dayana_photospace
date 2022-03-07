@@ -4,6 +4,9 @@ import {send} from '@emailjs/browser'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import CallIcon from '@mui/icons-material/Call';
 import { TabTitle } from '../../TabTitle';
+import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import PhoneIcon from '@mui/icons-material/Phone';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 
 export const Contact = () => {
@@ -104,7 +107,7 @@ export const Contact = () => {
                   <InstagramIcon  className='link-icon' />
               </a>
               <a href='tel:+48510022444' className='links'>
-                <CallIcon className='link-icon' />
+                <CallIcon className='link-icon phone' />
               </a>
             </div>
          </div>   

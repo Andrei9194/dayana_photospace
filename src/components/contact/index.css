@@ -233,9 +233,11 @@ input[type=number] {
 }
 
 .link-icon{
-  font-size:  40px !important;
+  font-size: 30px !important;
 }
-
+.phone {
+  font-size: 30px !important;
+}
 .link-icon:hover{
   color: #fff;
   font-size: 50px !important;

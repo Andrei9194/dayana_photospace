@@ -78,12 +78,11 @@
     }
 
     .nav-logo{
-        padding-top: 0px;
+        margin-bottom: 0;
     }
 
     .img{
         width:55%;
-        align-self: center;
     }
 
     .menuIcon-media{
@@ -124,12 +123,16 @@
 
     .nav-container{
         height: 10vh;
+        background-color: #fff;
     }
 
     .nav-logo{
         margin: 0;
         display: block;
-        width: 17vw;
+    }
+    .img{
+        width: 45%;
+
     }
 
     .nav-button-content{
