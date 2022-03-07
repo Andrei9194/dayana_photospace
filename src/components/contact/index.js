@@ -5,7 +5,6 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import CallIcon from '@mui/icons-material/Call';
 import { TabTitle } from '../../TabTitle';
 
-
 export const Contact = () => {
 
   TabTitle('Контакты')
@@ -104,7 +103,7 @@ export const Contact = () => {
                   <InstagramIcon  className='link-icon' />
               </a>
               <a href='tel:+48510022444' className='links'>
-                <CallIcon className='link-icon' />
+                <CallIcon className='link-icon phone' />
               </a>
             </div>
          </div>   
