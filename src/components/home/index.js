@@ -3,10 +3,12 @@ import { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
 import { collection, onSnapshot } from "firebase/firestore"
 import db from "../../firebase-config"
+import { TabTitle } from "../../TabTitle"
 
 
 export const Home =() =>{
 
+    TabTitle('Главная')
     const [images, setImages] = useState(null);
  
     useEffect(()=>{

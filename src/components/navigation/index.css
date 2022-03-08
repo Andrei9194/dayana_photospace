@@ -1,26 +1,22 @@
 .nav-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    width: 23.5%;
     height: 100%;
     position: fixed;
     z-index: 1;
-    top: 0;
-    left: 0;
     overflow-x: hidden;
     align-self: center;
     align-items: center;
-    width: 23.5%;
-}
-
-.nav-logo{
-    padding-top: 25px;
 }
 
 .nav-button-content{
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 35%;
 }
 
 .nav-button{
@@ -37,6 +33,7 @@
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #282828;
+    padding: 0;
 }
 
 .nav-button:hover{
@@ -46,16 +43,109 @@
 .nav-button-text{
     text-decoration: none;
 }
-
 .nav-button-text:hover{
     color: black;
 }
 
 .nav-socialMedia{
-    padding-bottom: 15px;
+    margin-bottom: 5%;
+}
+.nav-logo{
+    margin-bottom: 25px;
 }
 
 .img{
     pointer-events: none;
     align-items: center;
+}
+.dispay{
+    display: block;
+}
+.menuIcon-media{
+    display: none;
+}
+
+.active {
+    background: #e1e1e1;
+  }
+
+@media screen and (max-width: 992px) {
+    .nav-container{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 100px;
+        background-color: #fff;
+    }
+
+    .nav-logo{
+        margin-bottom: 0;
+    }
+
+    .img{
+        width:55%;
+    }
+
+    .menuIcon-media{
+        display: block;
+        position: absolute;
+        left: 93%;
+    }
+
+    .nav-button-content{
+        width: 100%;
+    }
+
+    .nav-button{
+        width: 100%;
+    }
+    .toogle-content{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #F8F8F8;
+        align-items: center;
+        margin: 0 auto;
+        inset:  0 0 0 65%;
+        transition: transform 350ms ease-in-out;
+    }
+    
+    .display-closet{
+        transform: translateX(100%);
+    }
+
+    .dispay-open{
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .nav-container{
+        height: 10vh;
+        background-color: #fff;
+    }
+
+    .nav-logo{
+        margin: 0;
+        display: block;
+    }
+    .img{
+        width: 45%;
+
+    }
+
+    .nav-button-content{
+        width: 70%;
+    }
+
+    .toogle-content{
+        inset:  0 0 0 0%;
+        background-color: #fff;
+    }
+
+    .menuIcon-media{
+        left: 90%;
+    }
 }
