@@ -3,13 +3,11 @@ import { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
 import { collection, onSnapshot } from "firebase/firestore"
 import db from "../../firebase-config"
-import useWindowDimensions from "./parametres"
 
 
 export const Home =() =>{
 
     const [images, setImages] = useState(null);
-    const {height} = useWindowDimensions()
  
     useEffect(()=>{
         onSnapshot(collection(db, 'homeImage'), (snapshot)=>{
@@ -24,10 +22,9 @@ export const Home =() =>{
               {images && images.map(image =>
                          
                 <Carousel.Item interval={3000}>
-                    <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`, height: `${height}px`}}>
+                    <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`}}>
                     </div>
                 </Carousel.Item>
-
                 )}
         </Carousel>
     </div>
