@@ -60,6 +60,10 @@
         flex-direction: column;
     }
 
+    [data-title]{
+        font-size: 1rem;
+    }
+
     [data-title]:after{
         opacity: 1; 
         top: 95%;

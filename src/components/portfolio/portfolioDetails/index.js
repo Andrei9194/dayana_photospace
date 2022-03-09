@@ -9,7 +9,6 @@ import { TabTitle } from '../../../TabTitle';
 
 export const PortfolioDetails =() =>{
 
-
     const [images, setImages] = useState(null)
     const params = useParams()
 
@@ -18,6 +17,7 @@ export const PortfolioDetails =() =>{
             setImages( snapshot.docs.map(doc =>doc.data()))
          })
     }, [params])
+
 
     TabTitle(params.id)
 
