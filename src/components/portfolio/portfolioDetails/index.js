@@ -35,6 +35,5 @@ export const PortfolioDetails =() =>{
                     </ImageListItem>
                 ))}
                 </ImageList>
-        </div>
     )
 }
