@@ -258,18 +258,26 @@ input[type=number] {
     width: 0;
   }
 
+@media screen and (max-width: 991.98px) {
+  .contact-container{
+    height: 100vh;
+  }
+}
+
 @media screen and (max-width: 576px) {
    
 
   .contact-container{
     height: 90vh;
-    justify-content: space-evenly;
   }
 
   .contact-information{
      max-width: 70vw;
   }
+  .contact-content{
+    justify-content: space-evenly;
 
+  }
   .contact-form{
       width: min(90%, 70.5rem);
   }
