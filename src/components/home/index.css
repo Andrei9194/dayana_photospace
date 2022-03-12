@@ -13,12 +13,14 @@
 .carousel{
     height: 100vh !important;
 }
-@media screen and (max-width: 576px){
-    .carousel{
-        height: 90vh !important;
+@media screen and (max-width: 991.98px) {
+    .carousel, .bg{
+        height: calc(100vh - 100px) !important;
     }
-    .bg{
-        height: 90vh;
+}
+@media screen and (max-width: 576px){
+    .carousel, .bg{
+        height: 90vh !important;
     }
 }
 
