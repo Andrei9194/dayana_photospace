@@ -17,5 +17,8 @@
     .carousel{
         height: 90vh !important;
     }
+    .bg{
+        height: 90vh;
+    }
 }
 
