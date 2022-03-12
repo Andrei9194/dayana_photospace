@@ -81,11 +81,7 @@
         font-size: 1rem;
     }
 
-    [data-title]:after{
-        opacity: 1; 
-        top: 95%;
-        left: 80%;
-    }
+
     .portfolio-element:hover{
         filter: none;
     }
