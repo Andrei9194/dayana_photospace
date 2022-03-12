@@ -10,3 +10,11 @@
     height: 100vh;
 }
 
+.carousel{
+    height: 100vh !important;
+}
+@media screen and (max-width: 576px){
+    .carousel{
+        height: 90vh !important;
+    }
+}

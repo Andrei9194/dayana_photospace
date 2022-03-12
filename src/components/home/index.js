@@ -21,7 +21,7 @@ export const Home =() =>{
           <Carousel>
               {images && images.map(image =>
                          
-                <Carousel.Item interval={3000}>
+                <Carousel.Item interval={3000} className='carousel'>
                     <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`}}>
                     </div>
                 </Carousel.Item>
