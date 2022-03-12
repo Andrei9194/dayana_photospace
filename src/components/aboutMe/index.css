@@ -1,0 +1,141 @@
+
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+.aboutme-container{
+   display: flex;
+   width: 100%;
+}
+.aboutme-content{
+    border-top: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	margin-top: 2vw;
+	margin-inline: auto;
+}
+.aboutme-information{
+	width: 26vw;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-top: 11.5vh;
+	margin-right: 22px;
+}
+
+
+.aboutme-title{
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 1rem;
+	line-height: 149%;
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+.aboutme-text{
+	font-style:italic;
+	font-size: 0.875rem;
+}
+
+.arrow {
+	font-size: 14px;
+	line-height: 20.86px;
+	color: black;
+	cursor: pointer;
+	align-items: flex-start;
+	text-transform: uppercase;
+	position: relative;
+	transition: transform 0.3s;
+	margin-left: 10px;
+}
+.arrow span {
+	 width: 100px;
+	 opacity: 0;
+	 transition: opacity 0.3s 0s;
+	 padding: 0 0.5em;
+}
+ .arrow:hover span {
+	 opacity: 1;
+	 transition: opacity 0.3s 0.1s;
+}
+.arrow:before {
+	 content: '';
+	 display: block;
+	 border: solid black;
+	 border-width: 2px 2px 0 0;
+	 position: absolute;
+	 top: 4px;
+	 width: 10px;
+	 height: 10px;
+}
+ .arrow.arrow--right:before {
+	 left: 0;
+	 transform: rotate(45deg);
+	 transition: left 0.3s 0.2s;
+} 
+.arrow.arrow--right:hover:before {
+	 left: 100%;
+	 transition: left 0.3s;
+}
+.aboutMe-contact-link{
+    text-decoration: none;
+    color: black;
+}
+.aboutMe-contact-link:hover{
+    color: black;
+}
+
+/* 
+.aboutme-avatar{
+	width: 360px;
+	height: 520px;
+} */
+
+.aboutme-image{
+	display: flex;
+	margin-top: 35px;
+	width: 27vw;
+	height: 81vh;
+}
+
+.aboutme-avatar{
+	background-repeat: no-repeat !important;
+	background-position: top !important;
+	background-size: cover !important;
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width: 576px) {
+
+	 .aboutme-content{
+		 flex-direction: column-reverse;
+		 align-items: center;
+		 justify-content: center;
+	 }
+
+	 .aboutme-information{
+		width: 90vw;
+		height: 400px;
+		margin-right: 0;
+		margin-bottom: 6rem;
+		margin: 1rem 0 2rem;
+	 }
+
+	 .aboutme-image{
+		 height: 250px;
+		 width: 250px;
+		 justify-content: center;
+		 align-items: center;
+	 }
+
+	 .aboutme-avatar{
+		background-repeat: no-repeat !important;
+		background-position: top !important;
+		background-size: cover !important;
+		width: 100%;
+		height:100%;
+		border-radius: 50%;
+	}
+}
