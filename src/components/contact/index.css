@@ -268,8 +268,7 @@ input[type=number] {
    
 
   .contact-container{
-    /* height: 90vh; */
-    height: auto;
+    height: 90vh;
   }
 
   .contact-information{
@@ -278,7 +277,6 @@ input[type=number] {
      
   }
   .contact-content{
-    /* justify-content: space-evenly; */
     height: auto;
   }
 
