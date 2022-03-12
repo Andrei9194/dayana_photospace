@@ -8,7 +8,7 @@
     margin-top: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: 15px;
+    grid-gap: 10px;
 }
 [data-title]{
     position: relative;
@@ -53,6 +53,31 @@
     pointer-events: none;
 }
 
+.overLay{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+    transition: visibilty 0s, opacity 0.5s;
+    z-index: 1;
+}
+
+.modal-image{
+    width: 30vw;
+    height:100%;
+
+}
+
+
+
 @media screen and (max-width: 991.98px) {
     [data-title]{
         font-size: 1rem;
@@ -69,7 +94,9 @@
     .portfolio-element:hover{
         filter: none;
     }
+    
 }
+
 @media screen and (max-width: 576px) {
     .portfolio-content-image{
         margin-top: 5px;
@@ -80,10 +107,4 @@
     [data-title]{
         font-size: 1rem;
     }
-
-
-    .portfolio-element:hover{
-        filter: none;
-    }
-    
 }
