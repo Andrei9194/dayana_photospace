@@ -8,11 +8,7 @@
     margin-top: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
-<<<<<<< HEAD
-    grid-gap: 15px;
-=======
     grid-gap: 10px;
->>>>>>> 4681ff20c91755c5d7953ac38da76e816b95fb40
 }
 [data-title]{
     position: relative;
@@ -55,7 +51,6 @@
     height: 100%; 
     width: 100%;
     pointer-events: none;
-<<<<<<< HEAD
 }
 
 .overLay{
@@ -87,9 +82,9 @@
         height: 100%;
 
     }
-=======
-    background-color: aqua;
->>>>>>> 4681ff20c91755c5d7953ac38da76e816b95fb40
+    .portfolio-element:hover{
+        filter: none;
+    }
 }
 @media screen and (max-width: 576px) {
     .portfolio-content-image{
@@ -106,16 +101,8 @@
     .portfolio-element:hover{
         filter: none;
     }
-<<<<<<< HEAD
- 
-
     .modal-image{
         width: 85.5vw;
         height: 100%;
     }
-
-   
-=======
-    
->>>>>>> 4681ff20c91755c5d7953ac38da76e816b95fb40
 }
