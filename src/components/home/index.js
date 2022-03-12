@@ -20,7 +20,7 @@ export const Home =() =>{
     return(
     <div className="home-conatiner">
   
-          <Carousel>
+          <Carousel className='carousel'>
               {images && images.map(image =>
                          
                 <Carousel.Item interval={3000} className='carousel'>
