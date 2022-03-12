@@ -268,7 +268,8 @@ input[type=number] {
    
 
   .contact-container{
-    height: 90vh;
+    /* height: 90vh; */
+    height: auto;
   }
 
   .contact-information{
