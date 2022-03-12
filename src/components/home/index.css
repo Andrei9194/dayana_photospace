@@ -10,9 +10,12 @@
     height: 100vh;
 }
 
-
+.carousel{
+    height: 100vh !important;
+}
 @media screen and (max-width: 576px){
-    .bg{
-        height: 90vh;
+    .carousel{
+        height: 90vh !important;
     }
 }
+
