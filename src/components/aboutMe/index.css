@@ -9,12 +9,12 @@
     border-top: 1px solid black;
 	display: flex;
 	flex-direction: row;
-	margin-top: 2vw;
+	/* margin-top: 2vw; */
 	margin-inline: auto;
 }
 .aboutme-information{
 	width: 26vw;
-	height: 75vh;
+	/* height: 75vh; */
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
