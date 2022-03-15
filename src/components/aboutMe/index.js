@@ -55,9 +55,9 @@ export const AboutMe =() =>{
                             </div>
                     </div>
                     <div className='aboutme-image'>
-                        {avatar && avatar.map(a =>
+                        {avatar && avatar.map(ava =>
                             <div className='aboutme-avatar' 
-                            style={{background: `url(${a.avatar})`}}
+                            style={{background: `url(${ava.avatar})`}}
                             > 
                             </div>                     
                         )}
