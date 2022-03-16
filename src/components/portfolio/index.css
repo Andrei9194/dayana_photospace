@@ -37,8 +37,7 @@
 }
 
 .portfolio-element{
-    width: 100%;
-    height: 500px;
+    width: 22vw;
     height: 100%;
     transition:.2s all; 
 }
