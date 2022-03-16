@@ -37,8 +37,8 @@
 }
 
 .portfolio-element{
-    width: 100%;
-    height: 500px;
+    /* width: 100%; */
+    width: 300px;
     height: 100%;
     transition:.2s all; 
 }
@@ -94,6 +94,9 @@
     .portfolio-element:hover{
         filter: none;
     }
+    .portfolio-element{
+        width: 29vw;
+    }
     
 }
 
@@ -106,5 +109,9 @@
 
     [data-title]{
         font-size: 1rem;
+    }
+
+    .portfolio-element{
+        width: 90vw;
     }
 }
