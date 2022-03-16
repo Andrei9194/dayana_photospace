@@ -12,6 +12,7 @@ export const AboutMe =() =>{
     const ColoredLine = ({ color }) => (
         <hr
           style={{
+              width: '100%',
             color,
             backgroundColor: color,
             height: 2,
@@ -54,16 +55,15 @@ export const AboutMe =() =>{
                             </div>
                     </div>
                     <div className='aboutme-image'>
-                         {avatar && avatar.map(a=>
-                         <img src={`${a.avatar}`}
-                         alt="me" 
-                         className='aboutme-avatar'
-                         />
-                    )}
+                        {avatar && avatar.map(a =>
+                            <div className='aboutme-avatar' 
+                            style={{background: `url(${a.avatar})`}}
+                            > 
+                            </div>                     
+                        )}
                     </div>
                 </div>
             </div>     
-
     )
 }
 

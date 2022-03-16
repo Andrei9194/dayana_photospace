@@ -1,12 +1,10 @@
-
 .nav-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
     left: 0;
     width: 23.5%;
-    width: 320px;
     height: 100%;
     position: fixed;
     z-index: 1;
@@ -18,7 +16,7 @@
 .nav-button-content{
     display: flex;
     flex-direction: column;
-    margin-bottom: 25px;
+    margin-bottom: 35%;
 }
 
 .nav-button{
@@ -48,12 +46,14 @@
 .nav-button-text:hover{
     color: black;
 }
-.nav-logo{
-    padding-top: 25px;
-}
+
 .nav-socialMedia{
-    padding-bottom: 15px;
+    margin-bottom: 5%;
 }
+.nav-logo{
+    margin-bottom: 25px;
+}
+
 .img{
     pointer-events: none;
     align-items: center;
@@ -67,49 +67,85 @@
 
 .active {
     background: #e1e1e1;
-
   }
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 992px) {
     .nav-container{
-        display: flex;
         flex-direction: row;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #fff;
+        justify-content: space-between;
         width: 100%;
-        height: 10%;
-        align-items: center;
-        padding-top: 5px;
+        height: 100px;
+        background-color: #fff;
     }
 
     .nav-logo{
-        padding: 0;
-        display: block;
+        margin-bottom: 0;
     }
+
     .img{
-        width:45%;
-        align-self: center;
+        width:55%;
     }
 
     .menuIcon-media{
-        margin-right: 20px;
         display: block;
+        position: absolute;
+        left: 93%;
     }
+
+    .nav-button-content{
+        width: 100%;
+    }
+
+    .nav-button{
+        width: 100%;
+    }
+    .toogle-content{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #F8F8F8;
+        align-items: center;
+        margin: 0 auto;
+        inset:  0 0 0 65%;
+        transition: transform 350ms ease-in-out;
+    }
+    
     .display-closet{
-        display: none;
+        transform: translateX(100%);
     }
 
     .dispay-open{
+        transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .nav-container{
+        height: 10vh;
+        background-color: #fff;
+    }
+
+    .nav-logo{
+        margin: 0;
         display: block;
     }
+    .img{
+        width: 45%;
 
-    .open-menu{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        justify-content: space-evenly;
     }
 
+    .nav-button-content{
+        width: 70%;
+    }
+
+    .toogle-content{
+        inset:  0 0 0 0%;
+        background-color: #fff;
+    }
+
+    .menuIcon-media{
+        left: 90%;
+    }
 }
