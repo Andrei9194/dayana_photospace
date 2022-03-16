@@ -93,6 +93,9 @@
     .portfolio-element:hover{
         filter: none;
     }
+    .portfolio-element{
+        width: 29vw;
+    }
     
 }
 
@@ -105,5 +108,9 @@
 
     [data-title]{
         font-size: 1rem;
+    }
+
+    .portfolio-element{
+        width: 90vw;
     }
 }
