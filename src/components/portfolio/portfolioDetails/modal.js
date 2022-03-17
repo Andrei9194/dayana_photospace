@@ -1,5 +1,6 @@
 import './index.css'
 
+
 export const Modal = ({open, onClose, bgImage})=>{
     if(!open) return null
     return(
