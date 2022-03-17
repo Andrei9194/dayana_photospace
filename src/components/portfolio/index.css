@@ -93,13 +93,16 @@
     .portfolio-element:hover{
         filter: none;
     }
+    .modal-image{
+        width: 45vw;
+    }
     .portfolio-element{
         width: 29vw;
     }
-    
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575.98px) {
+    
     .portfolio-content-image{
         margin-top: 5px;
         display: flex;
@@ -110,7 +113,8 @@
         font-size: 1rem;
     }
 
-    .portfolio-element{
+    .portfolio-element, .modal-image{
         width: 90vw;
     }
+
 }
