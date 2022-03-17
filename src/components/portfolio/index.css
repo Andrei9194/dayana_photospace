@@ -93,19 +93,16 @@
     .portfolio-element:hover{
         filter: none;
     }
-<<<<<<< HEAD
-
     .modal-image{
         width: 45vw;
-=======
+    }
     .portfolio-element{
         width: 29vw;
->>>>>>> d5473c20ebd151337298af44f7f1c0af728d0d04
     }
-    
 }
 
 @media screen and (max-width: 575.98px) {
+    
     .portfolio-content-image{
         margin-top: 5px;
         display: flex;
@@ -116,11 +113,8 @@
         font-size: 1rem;
     }
 
-<<<<<<< HEAD
-    .modal-image{
-=======
-    .portfolio-element{
->>>>>>> d5473c20ebd151337298af44f7f1c0af728d0d04
+    .portfolio-element, .modal-image{
         width: 90vw;
     }
+
 }
