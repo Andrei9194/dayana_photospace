@@ -104,7 +104,9 @@
 
 @media screen and (max-width: 1399.98px) {
 
-	 
+	 .aboutme-content{
+		 height: auto;
+	 }
 	 .aboutme-title{
 		 font-size: 1rem;
 	 }
