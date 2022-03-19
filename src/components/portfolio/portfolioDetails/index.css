@@ -20,14 +20,25 @@
     pointer-events: none;
     margin-bottom: 10px;
     height: 200px;
+    width: 21.6vw !important;
 }
-@media screen and (max-width: 576px) {
+
+@media screen and (max-width: 991.98px) {
+    .portfolioDetails-image{
+        width:28vw !important;
+    }
+}
+@media screen and (max-width: 575.98px) {
 
     .portfolioDetails-imageList{
         margin-top: 25px;
         column-gap: 10px;
         column-count: 2 !important;
         column-gap: 0 !important;
+    }
+
+    .portfolioDetails-image{
+        width: 40vw !important;
     }
 
 }

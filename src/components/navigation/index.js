@@ -45,7 +45,7 @@ const handleChangeMenu =() =>{
                     </div>
                 </div>
                 <div onClick={handleChangeMenu} className="menuIcon-media">
-                   {changeMenu ? <CloseIcon /> : <MenuIcon/> }
+                   {changeMenu ? <CloseIcon /> : <MenuIcon /> }
                 </div>
             </div>
     )

@@ -37,8 +37,7 @@
 }
 
 .portfolio-element{
-    width: 100%;
-    height: 500px;
+    width: 22vw;
     height: 100%;
     transition:.2s all; 
 }
@@ -51,22 +50,71 @@
     height: 100%; 
     width: 100%;
     pointer-events: none;
-    background-color: aqua;
 }
-@media screen and (max-width: 576px) {
+
+.overLay{
+    display: flex;
+    height:100vh;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    visibility: visible;
+    opacity: 1;
+    transition: visibilty 0s, opacity 0.5s;
+    z-index: 1;
+}
+
+.modal-image{
+    width: 30vw;
+    height:100%;
+
+}
+
+
+
+@media screen and (max-width: 991.98px) {
+    [data-title]{
+        font-size: 1rem;
+    }
+
+    [data-title]:after{
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-right: 5%;
+        opacity: 1; 
+        top: 95%;
+    }
+    .portfolio-element:hover{
+        filter: none;
+    }
+    .modal-image{
+        width: 45vw;
+    }
+    .portfolio-element{
+        width: 29vw;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    
     .portfolio-content-image{
         margin-top: 5px;
         display: flex;
         flex-direction: column;
     }
 
-    [data-title]:after{
-        opacity: 1; 
-        top: 95%;
-        left: 80%;
+    [data-title]{
+        font-size: 1rem;
     }
-    .portfolio-element:hover{
-        filter: none;
+
+    .portfolio-element, .modal-image{
+        width: 90vw;
     }
-    
+
 }
