@@ -10,7 +10,7 @@
 }
 
 .aboutme-content{
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 	display: flex;
 	flex-direction: row;
 	margin-inline: auto;
@@ -88,7 +88,6 @@
 .aboutMe-contact-link:hover{
     color: black;
 }
-
 
 .aboutme-image{
 	display: flex;

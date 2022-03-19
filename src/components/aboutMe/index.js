@@ -3,12 +3,16 @@ import db from "../../firebase-config"
 import './index.css'
 import { collection, onSnapshot } from 'firebase/firestore'
 import { Link } from 'react-router-dom'
+import { TabTitle } from '../../TabTitle'
 
 export const AboutMe =() =>{
+
+    TabTitle('Обо мне')
 
     const ColoredLine = ({ color }) => (
         <hr
           style={{
+              width: '100%',
             color,
             backgroundColor: color,
             height: 2,
@@ -51,16 +55,15 @@ export const AboutMe =() =>{
                             </div>
                     </div>
                     <div className='aboutme-image'>
-                    {avatar && avatar.map(a =>
+                        {avatar && avatar.map(ava =>
                             <div className='aboutme-avatar' 
-                            style={{background: `url(${a.avatar})`}}
+                            style={{background: `url(${ava.avatar})`}}
                             > 
                             </div>                     
                         )}
                     </div>
                 </div>
             </div>     
-
     )
 }
 
