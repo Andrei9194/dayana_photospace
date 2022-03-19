@@ -126,7 +126,8 @@
 
 	.aboutme-content{
 		width: 85vw;
-		height: auto;
+		height: 60%;
+		margin-top: 20%;
 
 	}
 	.aboutme-information{
@@ -146,6 +147,7 @@
 		 justify-content: center;
 		 width: 90vw;
 		 height: auto;
+		 margin-top: 0;
 	 }
 
 	 .aboutme-information{
