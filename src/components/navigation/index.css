@@ -16,7 +16,7 @@
 .nav-button-content{
     display: flex;
     flex-direction: column;
-    margin-bottom: 35%;
+    margin-bottom: 40%;
 }
 
 .nav-button{
@@ -47,12 +47,6 @@
     color: black;
 }
 
-.nav-socialMedia{
-    margin-bottom: 5%;
-}
-.nav-logo{
-    margin-bottom: 25px;
-}
 
 .img{
     pointer-events: none;
@@ -69,16 +63,37 @@
     background: #e1e1e1;
   }
 
+  .toogle-content{
+      margin-top: 20%;
+  }
+
+
+@media screen and (max-width: 1199.98px) {
+    .nav-container{
+        justify-content: space-between;
+    }
+    .nav-button-content{
+        margin-bottom: 80%;
+    }
+    .nav-logo{
+        margin-top: 20%;
+    }
+
+}
+
 @media screen and (max-width: 992px) {
     .nav-container{
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
         height: 100px;
+
+        margin-top: 20%;
     }
 
     .nav-logo{
-        margin-bottom: 0;
+        padding-top: 0px;
+        margin-top: 0;
     }
 
     .img{
@@ -137,6 +152,7 @@
 
     .nav-button-content{
         width: 70%;
+        margin-bottom: 15%;
     }
 
     .toogle-content{
