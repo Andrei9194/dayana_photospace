@@ -26,7 +26,7 @@ export const FaqS = () => {
 
   return (
     <div className='blog-container'>
-        <h3 style={{marginBottom: '50px'}}>Часто задаваемые вопросы</h3>
+        <h3 style={{marginBottom: '50px'}}>FAQ's</h3>
         {faqs && faqs.map(faq => 
           <FaqSrow faq={faq} key={faq.id}/>
         )}
