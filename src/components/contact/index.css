@@ -258,6 +258,19 @@ input[type=number] {
     width: 0;
   }
 
+@media screen and (max-width: 1399.98px) {
+      
+  .link-icon{
+    font-size: 30px !important;
+  }
+  .phone {
+    font-size: 30px !important;
+  }
+  .link-icon:hover{
+    font-size: 40px !important;
+  } 
+}
+
 @media screen and (max-width: 991.98px) {
   .contact-container{
     height: 100vh;
