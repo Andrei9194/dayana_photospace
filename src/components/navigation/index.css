@@ -38,6 +38,7 @@
 
 .nav-button:hover{
     background: #e1e1e1;
+    transition: width 350ms ease-in-out;
 }
 
 .nav-button-text{
@@ -65,6 +66,10 @@
 
   .toogle-content{
       margin-top: 20%;
+  }
+     
+  .nav-logo-link{
+     background-color: #fff;
   }
 
 

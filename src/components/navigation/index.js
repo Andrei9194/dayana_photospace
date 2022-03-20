@@ -17,25 +17,28 @@ const handleChangeMenu =() =>{
     return(
 
             <div className= "nav-container" >
-                <div className="nav-logo">
-                    <img src={logo1} alt="logo1" className="img"/>
-                </div>
+                <NavLink exact to='/' className='nav-logo-link'>
+                    <div className="nav-logo">
+                        <img src={logo1} alt="logo1" className="img"/>
+                    </div>
+                </NavLink>
+
                 <div className={changeMenu ? "toogle-content display-open": "toogle-content display-closet"}>
                     <div  className="nav-button-content">
                         <NavLink exact to='/'  className="nav-button-text" onClick={handleChangeMenu} >
-                            <button className="nav-button">Главная</button>
+                            <button className="nav-button">home</button>
                         </NavLink>
                         <NavLink to='/portfolio' className="nav-button-text" onClick={handleChangeMenu}>
-                            <button className="nav-button">портфолио</button>
+                            <button className="nav-button">portfolio</button>
                         </NavLink>
                         <NavLink to='/faq-page' className="nav-button-text" onClick={handleChangeMenu}>
-                            <button  className="nav-button">вопрос-ответ</button>
+                            <button  className="nav-button">faq's</button>
                         </NavLink>
                         <NavLink to='/about-me' className="nav-button-text" onClick={handleChangeMenu}>
-                            <button  className="nav-button">обо мне</button>
+                            <button  className="nav-button">about me</button>
                         </NavLink>
                         <NavLink to='/contacts' className="nav-button-text" onClick={handleChangeMenu}>
-                            <button  className="nav-button">контакты</button>
+                            <button  className="nav-button">contact</button>
                         </NavLink>
                     </div>
                     <div className="nav-socialMedia">
