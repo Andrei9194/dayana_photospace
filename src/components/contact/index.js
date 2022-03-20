@@ -67,34 +67,34 @@ export const Contact = () => {
     <div className='contact-container'>
         <div className='contact-content'>
             <div className='contact-information'>
-                <h1 className='contact-title'>Есть вопросы?</h1>
-                <p className='contact-text'>Если вы заинтересованы или заинтересованы в сессии, напишите мне: 
+                <h1 className='contact-title'>You have questions?</h1>
+                <p className='contact-text'>If you want information or are interested in a photo session, please contact me:
                 <span><a href='mailto:dayanaklimuk@gmail.com' className='contact-link-email'> dayanaklimuk@gmail.com</a></span></p>
             </div>
               <form ref={form} onSubmit={sendEmail} className='contact-form'>
                   <div className='name-phone-area'>
 
-                    <input type="text" name="name" placeholder={((name=== '')  && !click) ?  'Введите имя' : "Имя"}
+                    <input type="text" name="name" placeholder={((name=== '')  && !click) ?  'Please enter your name' : "Your name"}
                     value={name}
                       className={((name=== '' )&& !click) ? 'contact-form-input-error name-phone-input' : 'contact-form-input name-phone-input'}
                       onChange={(e)=>nameHandler(e)}
                     />
-                    <input type="number" name="user_phone" placeholder={((number === '') && !click) ?  'Введите номер телефона'  : "Номер телефона"}
+                    <input type="number" name="user_phone" placeholder={((number === '') && !click) ?  'Please enter your phone'  : "Your phone"}
                       className={(number === '' && !click) ? 'contact-form-input-error name-phone-input' : 'contact-form-input name-phone-input'}
                       onChange={(e)=>numberHandler(e)}
                       value={number}
                     />
                   </div>
-                <input type="email" name="user_email" placeholder={((email === '') && !click)  ?  'Введите эдектроную почту' : "Адрес электронной почты"}
+                <input type="email" name="user_email" placeholder={((email === '') && !click)  ?  'Please enter your email' : "Your email"}
                     className={(email === '' && !click) ? 'contact-form-input-error' : 'contact-form-input'}
                     onChange={(e)=>handlerEmail(e)} 
                     value={email}
                   />
                   <textarea name="message"  value={textArea}
-                  onChange={(e)=>handleTextArea(e)} placeholder='Введите свое сообщение' className='contact-form-input contact-form-text-area'/>
+                  onChange={(e)=>handleTextArea(e)} placeholder='Your message' className='contact-form-input contact-form-text-area'/>
                 {!click ? 
-                    <button  className='btn-send-disabled' onClick={hanlderClick} disabled={!click}>Заполни поля</button>
-                    :<button  className='btn-send' onClick={hanlderClick} disabled={!click}>Отправить</button>
+                    <button  className='btn-send-disabled' onClick={hanlderClick} disabled={!click}>Fill in the fields</button>
+                    :<button  className='btn-send' onClick={hanlderClick} disabled={!click}>Send</button>
 
                 }
               </form>
