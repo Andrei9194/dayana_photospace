@@ -33,19 +33,20 @@ export const AboutMe =() =>{
             <div className='aboutme-container' >     
                 <div className='aboutme-content'> 
                     <div className='aboutme-information'>
-                        <h4 className='aboutme-title'>Добро пожаловать на мой сайт!</h4>
+                        <h4 className='aboutme-title'>welcome to my website!</h4>
                             <p className='aboutme-text'>
-                                Меня зовут Даяна и я с удовольствием<br/> стану Вашим фотографом.
+                                My name is Dayana and I am to happy to will be your photographer
                             </p>
                             <p className='aboutme-text'>
-                                В фотографии я люблю нежность,<br/> детали, чувственность. Стремлюсь сделать каждую съёмку особенной, незабываемой<br /> и вдохновляюсь ее участниками.
+                                In photography, I love tenderness, details, sensibility. I strive to make every photograph special and unforgettable.
+                                and inspired by its participants.
                             </p>
                             <p className='aboutme-text'>
-                                Живу и снимаю в Гродно. <br/>
-                                Если наши с вами взгляды на съемку совпадают, свяжитесь со мной любым удобным для вас способом. 
+                            I live and photograph in Grodno. <br/>
+                            If our views on withdrawal are shrinking, they turn to me for help.
                                     <span className="arrow arrow--right">
                                         <Link to='/contacts' className='aboutMe-contact-link'>
-                                            <span>Kонтакты</span>
+                                            <span>Contacts</span>
                                         </Link>
                                     </span>
                             </p> 
