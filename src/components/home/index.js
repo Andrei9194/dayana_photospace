@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import Carousel from 'react-bootstrap/Carousel'
 import { collection, onSnapshot } from "firebase/firestore"
 import db from "../../firebase-config"
-import useWindowDimensions from "./parametres"
 import { TabTitle } from "../../TabTitle"
 
 
@@ -11,7 +10,6 @@ export const Home =() =>{
 
     TabTitle('Главная')
     const [images, setImages] = useState(null);
-    const {height} = useWindowDimensions()
  
     useEffect(()=>{
         onSnapshot(collection(db, 'homeImage'), (snapshot)=>{
@@ -22,14 +20,13 @@ export const Home =() =>{
     return(
     <div className="home-conatiner">
   
-          <Carousel>
+          <Carousel className='carousel'>
               {images && images.map(image =>
                          
-                <Carousel.Item interval={3000}>
-                    <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`, height: `${height}px`}}>
+                <Carousel.Item interval={3000} className='carousel'>
+                    <div className="bg" style={{backgroundImage: `url(${image.homeUrl})`}}>
                     </div>
                 </Carousel.Item>
-
                 )}
         </Carousel>
     </div>
