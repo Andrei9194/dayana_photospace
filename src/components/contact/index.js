@@ -7,7 +7,7 @@ import { TabTitle } from '../../TabTitle';
 
 export const Contact = () => {
 
-  TabTitle('Контакты')
+  TabTitle('Contacts')
   const form = useRef();
 
   const [name, setName] = useState('')

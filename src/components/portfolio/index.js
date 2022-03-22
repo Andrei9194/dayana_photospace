@@ -7,7 +7,7 @@ import { TabTitle } from "../../TabTitle"
 export const Portfolio =() =>{
 
 
-    TabTitle('Портфолио')
+    TabTitle('Portfolio')
     const [images, setImages] = useState(null)
 
     useEffect(()=>{
