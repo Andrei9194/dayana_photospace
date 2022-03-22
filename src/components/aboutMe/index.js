@@ -7,7 +7,7 @@ import { TabTitle } from '../../TabTitle'
 
 export const AboutMe =() =>{
 
-    TabTitle('Обо мне')
+    TabTitle('About Me')
 
     const ColoredLine = ({ color }) => (
         <hr

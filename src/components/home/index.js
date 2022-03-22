@@ -9,7 +9,7 @@ import { TabTitle } from "../../TabTitle"
 
 export const Home =() =>{
 
-    TabTitle('Главная')
+    TabTitle('Home')
     const [images, setImages] = useState(null);
     const {height} = useWindowDimensions()
  

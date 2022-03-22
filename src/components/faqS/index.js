@@ -7,7 +7,7 @@ import './index.css'
 
 export const FaqS = () => {
   
-TabTitle('Вопрос-Ответ')
+TabTitle("FAQ's")
   const [faqs, setFaqs] = useState(null)
 
   useEffect(()=>{
