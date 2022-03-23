@@ -3,6 +3,7 @@ import './index.css'
 import { DATABASE_URL } from '../../firebase-config'
 import { PortfolioRow } from "./portfolioRow"
 import { TabTitle } from "../../TabTitle"
+import { SkeletonPortfolio } from "../skeleton/skeletonPortfolio"
 
 export const Portfolio =() =>{
 
@@ -28,6 +29,7 @@ export const Portfolio =() =>{
                     <PortfolioRow image={image}/>            
                 )
                 }
+                {!images && [1, 2, 3].map((n)=> <SkeletonPortfolio key={n}/>) }
             </div>
         </div>
     )
