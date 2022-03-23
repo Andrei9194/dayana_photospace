@@ -3,6 +3,7 @@ import './index.css'
 import { DATABASE_URL } from '../../firebase-config'
 import { PortfolioRow } from "./portfolioRow"
 import { TabTitle } from "../../TabTitle"
+import { SkeletonImage } from "../skeletons/skeletonImage"
 
 export const Portfolio =() =>{
 
@@ -23,6 +24,8 @@ export const Portfolio =() =>{
   
     return(
         <div className="portfolio-container" >
+
+          
             <div className="portfolio-content-image">
                     {images && images.map(image=> 
                       <PortfolioRow image={image}/>            

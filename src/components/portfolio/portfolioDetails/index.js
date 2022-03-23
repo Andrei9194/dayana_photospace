@@ -31,8 +31,6 @@ export const PortfolioDetails =() =>{
         setIsOpen(!isOpen)
     }
 
-    console.log(modalImage)
-
     const handleModalChange =(imageUrl)=>{
         handleModalImage(imageUrl)
         handleOpen()
