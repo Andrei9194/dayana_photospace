@@ -6,6 +6,7 @@ import { Home } from '../home'
 import { Portfolio } from '../portfolio'
 import {PortfolioDetails} from '../../components/portfolio/portfolioDetails'
 import './index.css'
+import { PageNotFound } from '../pageNotFound'
 
 
 
@@ -20,6 +21,7 @@ export const Content = () =>{
                 <Route path='/faq-page' element={<FaqS/>} />
                 <Route path='/portfolio' element={<Portfolio />} />
                 <Route path='/portfolio/:id' element={<PortfolioDetails />} />
+                <Route path='/*' element={<PageNotFound/>} />
             </Routes>
         </div>
     )

@@ -1,0 +1,89 @@
+.pageNotFound-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageNotFound-content{
+
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-inline: auto;
+    height: 300px;
+}
+.pageNotFound-information{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.pageNotFound-bg{
+    width: 100%;
+    height: 300px;
+    background-image: url(/src/assets/404.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2:nth-child(2){
+      font-weight: bolder;
+}
+
+.pageNotFound-text{
+    text-align: left;
+}
+
+.pageNotFound-link{
+    color: black;
+}
+.pageNotFound-link:hover{
+    color: black;
+}
+
+@media screen and (max-width: 991.98px) {
+    .pageNotFound-container{
+        align-items: flex-start;
+		height: calc(100vh - 100px);
+     }
+    .pageNotFound-content{
+        width: 70vw;
+		height: 100%;
+        flex-direction: column-reverse;
+        justify-content: center;
+    }
+
+    .pageNotFound-bg{
+        width: 80%;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 575.98px) {
+    .pageNotFound-container{
+        height: 90vh;
+        align-items: center;
+     }
+    .pageNotFound-content{
+        flex-direction: column-reverse;
+        height: auto;
+        min-height: 300px;
+        width: 90vw;
+        justify-content: space-evenly;
+    }
+    .pageNotFound-title{
+        font-size: 1rem;
+    }
+    .pageNotFound-bg{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+    .pageNotFound-text{
+        font-size: 0.8rem;
+    }
+
+}
